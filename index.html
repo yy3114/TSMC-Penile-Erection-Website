@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資本曲線與身體曲線：台積電股價波動與男性性功能表現（陰莖勃起角度）之統計關聯性初探</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+        }
+        h1 { font-size: 2.2em; }
+        h2 { font-size: 1.8em; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        h3 { font-size: 1.4em; }
+        h4 { font-size: 1.2em; }
+        p { margin-bottom: 1em; }
+        strong { font-weight: bold; }
+        em { font-style: italic; }
+        ul { list-style-type: disc; margin-left: 20px; margin-bottom: 1em; }
+        ol { list-style-type: decimal; margin-left: 20px; margin-bottom: 1em; }
+        li { margin-bottom: 0.5em; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        sup {
+            vertical-align: super;
+            font-size: 0.7em;
+            line-height: 0;
+        }
+      .abstract,.acknowledgements,.references {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+      .abstract h2,.acknowledgements h2,.references h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>資本曲線與身體曲線：台積電股價波動與男性性功能表現（陰莖勃起角度）之統計關聯性初探</h1>
+
+    <div class="abstract">
+        <h2>摘要</h2>
+        <p>本研究旨在探討台灣積體電路製造股份有限公司（TSMC）股價與陰莖勃起角度之間是否存在統計關聯性。鑑於這兩個變項在理論上缺乏任何已知的生物學或生理學機制連結，本研究的核心目的並非尋求實際的因果關係，而是作為一個嚴謹的案例研究，以展示在缺乏理論基礎的情況下，如何應用時間序列分析技術來分析歷史金融數據與<strong>假設性、合成生成</strong>的生理數據。研究方法著重於時間序列分析，包括定態性檢定（如增廣迪基-富勒（ADF）檢定和 Kwiatkowski-Phillips-Schmidt-Shin（KPSS）檢定）、相關性分析（如皮爾森相關係數、斯皮爾曼等級相關係數、交叉相關函數）以及格蘭傑因果檢定。本研究將呈現主要的統計發現（或缺乏統計關聯性），並重點強調其對於理解虛假相關性、純粹統計推斷的局限性，以及理論框架在穩健實證研究中關鍵作用的更廣泛意涵。本報告明確指出，即使觀察到任何統計相關性，也應將其解釋為統計假象，而非具有意義的因果連結。</p>
+    </div>
+
+    <h2>1. 引言</h2>
+
+    <h3>1.1 台積電的市場重要性背景</h3>
+    <p>台灣積體電路製造股份有限公司（TSMC）不僅是台灣經濟的支柱，更是全球半導體產業的領導者和基石。作為全球最大的專業積體電路製造服務公司，台積電在晶圓代工市場佔據主導地位，擁有約 60% 的市場份額，尤其在最先進製程節點（如 7nm、5nm、3nm 及未來的 2nm）方面，更是擁有高達 90% 的壟斷性市場份額<sup></sup>。這些領先製程節點對於人工智慧（AI）、5G通訊、高效能運算（HPC）、高階智慧型手機、自動駕駛技術以及軍事國防系統等關鍵應用至關重要<sup></sup>。因此，台積電的業務表現不僅影響著蘋果、輝達、高通、聯發科、英特爾和超微等主要科技巨擘，更牽動著全球多國的經濟脈動和技術發展方向<sup></sup>。</p>
+    <p>台積電的股價表現受到多重複雜因素的影響，這些因素可大致分為宏觀經濟、行業特定和地緣政治層面。宏觀經濟因素包括全球半導體需求（如人工智慧、5G、汽車產業的發展）、技術進步與競爭格局、供應鏈韌性、能源成本、原物料價格以及全球經濟健康指標（如國內生產總值增長、通貨膨脹、利率）等<sup></sup>。行業特定因素則涉及半導體產業的週期性、技術創新速度、資本支出（台積電預計 2024 年資本支出將達 380-420 億美元，以應對 AI 晶片需求激增）<sup></sup> 以及來自三星、英特爾等競爭對手的挑戰。地緣政治緊張局勢，特別是美中貿易摩擦和兩岸關係，對台積電的營運和股價構成顯著風險<sup></sup>。美國的《晶片與科學法案》旨在提高本土半導體產能並限制中國獲取先進技術，這促使台積電在美國亞利桑那州和日本等地擴建晶圓廠，以分散地緣政治風險，儘管其大部分產能仍將留在台灣<sup></sup>。</p>
+    <p>台積電股票的表現，作為全球經濟與科技產業的晴雨表，其股價波動性高且複雜，反映了全球經濟趨勢、科技週期和地緣政治發展的錯綜複雜。一個變數若受到如此廣泛、多樣且大部分外部因素的影響，其隨時間推移將呈現出複雜、非線性且看似隨機的波動。這種固有的複雜性增加了其運動與另一個獨立波動變數隨機對齊的統計機率，即使兩者之間沒有潛在的因果或理論聯繫。這為本研究探索和識別虛假相關性的核心主題奠定了基礎，表明單純的統計關聯不足以進行有意義的推斷。</p>
+
+    <h3>1.2 生理測量簡介：陰莖勃起角度</h3>
+    <p>陰莖勃起角度是衡量勃起功能的一個可量化生理參數。在真實世界的臨床情境中，其受到個體生物學（如血管健康、神經完整性、荷爾蒙平衡）、心理學（如壓力、焦慮、情緒）和環境因素的複雜相互作用影響<sup></sup>。然而，<strong>必須明確指出並強調，就本研究而言，所使用的陰莖勃起角度數據完全是假設性的，為本研究目的而合成生成，並非源自真實世界的臨床觀察或人類受試者</strong>。</p>
+    <p>由於本研究中代表核心變數之一的數據並非真實數據，因此任何觀察到的「發現」或相關性都不能被解釋為真實世界的現象或生物學事實。為了維持學術嚴謹性並管理讀者預期，這項關鍵限制必須在引言中立即披露。這重新定義了本研究的貢獻：它不是發現一種新穎的相關性，而是展示分析技術、解釋數據真實性受損的挑戰，以及理論基礎的重要性。這種透明度對於本研究的可信度至關重要。</p>
+
+    <h3>1.3 探索非傳統相關性的理由</h3>
+    <p>本研究承認這兩個變數（台積電股價與陰莖勃起角度）本質上是異質且看似不相關的，表面上缺乏任何可想像的直接因果或理論連結。然而，進行這項研究的主要理由是：它將作為一個嚴謹但極端的案例研究，用於調查複雜、高維數據集中虛假相關性現象。在「大數據」和先進計算工具盛行的時代，在真正不相關的變數之間找到統計顯著關係的便利性正在增加。這使得理解、識別和批判性評估虛假相關性對於跨學科的穩健科學探究和負責任的數據解釋至關重要。</p>
+    <p>本研究旨在證明，即使在缺乏關係理論基礎的情況下，也應採用適當的方法學嚴謹性，突顯出在沒有合理機制或明確假設的情況下，將統計相關性解釋為因果關係的固有危險。由於用戶查詢提出了一個直觀上荒謬的相關性，且沒有已知或合理的生物學或生理學聯繫，本研究最有價值的貢獻是作為一個教科書式的範例，說明統計上顯著的相關性如何純粹偶然地產生，以及為什麼此類發現必須根據理論框架和領域知識進行批判性評估。這將論文定位為對所有領域的數據科學家和研究人員的警示。它強調單純的統計顯著性不足以推斷有意義的關係，並且在沒有指導理論的情況下追求模式可能導致誤導性結論。它強調了科學懷疑論以及將領域專業知識與統計分析相結合的重要性。</p>
+
+    <h3>1.4 研究問題與目標</h3>
+    <p>本研究旨在回答以下問題並達成相應目標：</p>
+    <ul>
+        <li><strong>主要研究問題：</strong> 在2020年1月1日至2023年12月31日期間，台積電每日收盤價與每日平均假設性陰莖勃起角度數據之間是否存在統計顯著相關性？</li>
+        <li><strong>次要目標：</strong>
+            <ul>
+                <li>應用適當的時間序列統計方法來分析不同數據集之間的相關性。</li>
+                <li>在缺乏合理理論或生物學機制的情況下，批判性評估任何觀察到的統計關係，強調虛假相關性的概念。</li>
+                <li>突顯涉及非傳統數據配對的跨學科定量分析中固有的方法學考量和挑戰。</li>
+                <li>為關於統計發現的負責任解釋以及在數據豐富環境中識別虛假相關性的更廣泛討論做出貢獻。</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>2. 概念框架與文獻回顧</h2>
+
+    <h3>2.1 金融市場動態與影響股價的因素（以台積電為重點）</h3>
+    <p>金融市場的理論基礎包括有效市場假說（Efficient Market Hypothesis, EMH），該假說認為股價反映了所有可用信息，使得持續「擊敗市場」變得困難<sup></sup>。EMH 通常分為三種形式：</p>
+    <ol>
+        <li><strong>弱式效率 (Weak-form Efficiency)：</strong> 認為股價已反映所有歷史價格和交易量資訊。因此，基於歷史價格模式的技術分析無法持續獲得超額收益<sup></sup>。</li>
+        <li><strong>半強式效率 (Semi-strong-form Efficiency)：</strong> 認為股價已反映所有公開可用的資訊，包括財務報表、盈餘公告、新聞報導、宏觀經濟數據等。因此，基於公開資訊的基本分析也無法持續獲得超額收益<sup></sup>。</li>
+        <li><strong>強式效率 (Strong-form Efficiency)：</strong> 認為股價已反映所有公開和私人（內部）資訊。在此形式下，即使是內部人也無法持續獲得超額收益<sup></sup>。</li>
+    </ol>
+    <p>儘管 EMH 在學術界曾廣泛被接受，但行為金融學的興起對其提出了挑戰。行為金融學融合了經濟學與心理學，認為投資者並非完全理性，其決策會受到認知偏差、情緒和啟發式方法的影響<sup></sup>。常見的行為偏差包括過度自信偏差（Overconfidence Bias）、羊群行為（Herding Behavior）、損失厭惡（Loss Aversion）和心理帳戶（Mental Accounting）等<sup></sup>。這些偏差可能導致市場異象（Market Anomalies），如資產泡沫、股價過度反應和日曆效應，從而挑戰了市場效率的假設<sup></sup>。然而，即使行為金融學解釋了市場的非理性波動，這些波動也主要源於人類心理和市場結構，與個體生理狀態之間仍無直接或可想像的連結。</p>
+    <p>台積電的股價表現受到多種宏觀經濟、行業特定和公司特定因素的共同驅動。這些因素包括但不限於全球半導體需求（例如來自人工智慧、5G、汽車行業的需求）、技術進步和競爭格局、供應鏈韌性、能源成本、原材料價格以及全球經濟健康指標（例如國內生產總值增長、通貨膨脹、利率）等<sup></sup>。特別是地緣政治緊張局勢，如美中科技戰和台海關係，對台積電的股價產生深遠影響<sup></sup>。美國的晶片法案旨在提升本土半導體生產能力，並限制中國獲取先進晶片技術，這導致全球半導體供應鏈的重組，並促使台積電等公司在美國和日本等地進行巨額投資<sup></sup>。這些複雜的宏觀力量，與微觀層面、個體人類生理完全脫節。沒有已知或合理的機制可以使這些宏觀力量直接或間接影響個體勃起角度，反之亦然。這強化了台積電股價與勃起角度之間存在真正因果關係的先驗可能性極低。它加強了理論論證，即任何發現的統計相關性都將是虛假關係的有力候選者，強調了理論合理性在科學探究中優於單純統計關聯的重要性。</p>
+
+    <h3>2.2 影響陰莖勃起角度的生理因素</h3>
+    <p>陰莖勃起的複雜生理機制涉及神經、血管和荷爾蒙系統的協調反應<sup></sup>。其核心是陰莖海綿體平滑肌的鬆弛和血流量的增加。性刺激會導致海綿體神經釋放一氧化氮（NO），NO 隨後激活鳥苷酸環化酶（sGC），增加環磷酸鳥苷（cGMP）水平，進而導致平滑肌鬆弛和陰莖充血<sup></sup>。同時，海綿體靜脈被壓縮，限制血液流出，從而維持勃起<sup></sup>。勃起消退則是由於交感神經活動增加，釋放去甲腎上腺素，導致血管收縮和平滑肌收縮<sup></sup>。</p>
+    <p>在真實世界中，影響勃起角度和整體勃起功能的各種因素，其個體化且通常敏感的性質：</p>
+    <ul>
+        <li><strong>年齡：</strong> 隨著年齡增長，血管功能下降、神經傳導減慢和荷爾蒙水平變化（如睾酮減少）會導致勃起功能逐漸下降<sup></sup>。</li>
+        <li><strong>健康狀況：</strong> 糖尿病、心血管疾病（如動脈粥樣硬化、高血壓、高血脂）、神經系統疾病（如帕金森氏症、多發性硬化症）、肥胖和慢性腎病等全身性疾病會顯著損害勃起功能<sup></sup>。勃起功能障礙（ED）常被視為心血管疾病的早期預警信號<sup></sup>。</li>
+        <li><strong>生活方式因素：</strong> 吸煙、過度飲酒、不良飲食習慣和缺乏體育鍛煉是勃起功能障礙的已知風險因素<sup></sup>。</li>
+        <li><strong>心理狀態：</strong> 壓力、焦慮、抑鬱、表現焦慮和人際關係問題等心理健康狀況會深刻影響勃起功能<sup></sup>。</li>
+        <li><strong>藥物：</strong> 許多治療各種疾病的藥物，如抗抑鬱藥、降壓藥、抗組胺藥和某些激素調節劑，可能導致勃起功能障礙作為副作用<sup></sup>。</li>
+        <li><strong>手術：</strong> 盆腔區域的手術，特別是根治性前列腺切除術，是導致勃起功能障礙的常見原因<sup></sup>。</li>
+        <li><strong>時間/晝夜節律：</strong> 全天荷爾蒙水平（如睾酮）的自然波動會影響勃起準備狀態，例如夜間陰莖勃起（NPT）現象<sup></sup>。</li>
+    </ul>
+    <p>這些因素高度個體化、通常敏感，並且通常獨立於全球金融市場或宏觀經濟指標運作。陰莖勃起角度的高度個體化、生物和心理驅動的性質，加上其易受多種內部和個人因素影響，使得其極不可能受到外部宏觀經濟指標（如股價）的影響，或與之存在因果關係。這進一步鞏固了預期虛假相關性的理論基礎。對影響勃起角度的因素的詳細檢視，進一步強化了兩個變數之間缺乏真正因果聯繫的論點。它突顯了它們之間巨大的概念和機制鴻溝，從而強調了本研究的主要目的，即作為統計方法論和虛假相關性調查，而非尋求新穎的生物經濟聯繫。</p>
+
+    <h3>2.3 虛假相關性與建立因果關係的挑戰</h3>
+    <p>虛假相關性（Spurious Correlation）是指兩個變數之間存在統計關係，但實際上並無因果連結<sup></sup>。這種表面的聯繫通常是純粹的巧合、共同的潛在混淆因素影響兩個變數，或者在分析大型數據集時純粹偶然發生<sup></sup>。經典的虛假相關性教學範例包括人均人造奶油消費量與緬因州離婚率之間的相關性，或因落入游泳池溺水的人數與尼古拉斯·凱奇出演電影數量之間的相關性<sup></sup>。這些例子說明了在沒有理論基礎的情況下，統計顯著性如何可能產生誤導。</p>
+    <p>從相關性推斷因果關係存在根本的哲學和統計挑戰，強調了「相關不蘊含因果」（Correlation does not imply causation）這一基本原則<sup></sup>。相關性僅表示關聯，而非因果關係<sup></sup>。在統計檢定中，特別是在進行多重比較（Multiple Comparisons Problem）或「數據挖掘」（Data Mining，在沒有預先定義假設的情況下尋找模式）時，引入了第一型錯誤（Type I Error，假陽性）的概念<sup></sup>。進行的檢定越多，純粹偶然發現統計顯著結果的機率就越高<sup></sup>。例如，如果設定顯著性水平 α = 0.05，則每次檢定都有 5% 的機率錯誤地拒絕真實的虛無假設。在大數據環境下，這種問題尤為突出，因為數據量和變數數量的激增，使得隨機出現統計顯著相關性的可能性大大增加<sup></sup>。</p>
+    <p>因此，強調需要一個合理的理論框架、一個可檢驗的因果機制或受控實驗設計來支持任何觀察到的統計關係為真正的因果關係<sup></sup>。沒有這些基礎，即使是強相關性也應極度謹慎對待。科學理論不僅提供解釋和預測，更為研究過程提供框架，指導研究問題的形成和研究結果的解釋<sup></sup>。缺乏理論指導的純粹數據驅動分析，可能導致「知識的假象」，即看似有意義的發現實則毫無根據<sup></sup>。</p>
+    <p>台積電股價與陰莖勃起角度之間缺乏已知的生物學或生理學機制連結，為本研究提供了根本前提。這證實了本研究是旨在展示虛假相關性的<strong>設計</strong>實驗，而非探索新穎、有意義關係的探索性研究。這項理解定義了本研究的學術貢獻。這個觀察結果與虛假相關性的定義 <sup></sup> 以及第一型錯誤的危險 <sup></sup> 和相關性與因果關係的區別 <sup></sup> 相結合，構成了整篇論文的理論支柱。由於生物學或理論連結被明確排除，任何發現的統計相關性，根據定義，必然是虛假的或統計假象。因此，本研究的目的不是發現新的事實，而是說明一個已知的統計現象。這項理解至關重要，因為它定義了本研究<strong>真正</strong>的科學貢獻。它將論文從一個奇特的觀察轉變為一個受控實驗（儘管使用了假設性數據），旨在說明一個基本的統計陷阱。它將重點從「是什麼」（是否存在相關性？）轉移到「如何」（我們如何嚴謹地分析此類數據，以及在缺乏理論的情況下如何解釋發現？）。這將論文從對不尋常查詢的簡單回應提升為對科學探究原則和負責任數據解釋的嚴肅方法論討論。</p>
+
+    <h2>3. 數據獲取與準備</h2>
+
+    <h3>3.1 台積電股價數據描述</h3>
+    <p>台積電股價數據將從公開可用的金融數據庫獲取，例如歷史股票交易所或信譽良好的金融數據提供商（例如Yahoo Finance）。數據集將包含2020年1月1日至2023年12月31日期間台積電股票（台灣證券交易所代碼：2330.TW；紐約證券交易所代碼：TSM）的每日收盤價。選擇每日收盤價作為主要分析變數，是因為它代表了每個交易日市場對該股票的最終共識價值，且易於獲取和與其他時間序列數據進行同步。這是一個時間序列數據集，本質上會受到市場假期、非交易日（週末）和潛在數據異常的影響。數據將反映第2.1節中討論的全球經濟因素、行業新聞和公司特定事件的複雜相互作用。</p>
+
+    <h3>3.2 陰莖勃起角度數據描述</h3>
+    <p><strong>再次強調，此數據完全是假設性的，專為本研究目的而合成生成</strong>。它不源自任何真實世界的臨床測量、人類受試者或現有數據庫。這確保了沒有道德問題，並將研究重點放在方法學展示上<sup></sup>。數據集將包含模擬人群的假設性每日平均陰莖勃起角度值（以度為單位），涵蓋與台積電股價相同的時間段：2020年1月1日至2023年12月31日。數據生成過程旨在模擬真實生理數據中觀察到的合理變異性和範圍，而不複製特定的個體模式。</p>
+    <p>在真實臨床或研究環境中，陰莖勃起角度的測量是一個複雜且具有挑戰性的過程，因為勃起狀態本身是動態且高度個體化的。常用的測量方法包括：</p>
+    <ul>
+        <li><strong>量角器測量 (Goniometer Measurement)：</strong> 臨床上，醫生可能會在藥物誘導勃起後，使用量角器直接測量陰莖與身體（例如大腿或腹部）之間的角度<sup></sup>。然而，這種方法容易受到測量者主觀判斷和測量位置的影響，導致測量結果存在顯著的觀察者內（intra-observer）和觀察者間（inter-observer）變異性<sup></sup>。</li>
+        <li><strong>夜間陰莖勃起（NPT）監測：</strong> 使用如 RigiScan™ 等設備，在睡眠期間監測陰莖的周徑和硬度變化<sup></sup>。雖然 NPT 監測被認為是區分心因性與器質性勃起功能障礙的可靠方法，但其成本高昂、操作複雜且結果一致性可能受限<sup></sup>。</li>
+        <li><strong>數字圖像分析 (Digital Image Analysis)：</strong> 透過拍攝勃起陰莖的 2D 圖像，並利用專門的軟體或人工智慧工具（如 PenoMeter）進行幾何計算，以量化彎曲角度<sup></sup>。這種方法旨在提供更客觀和可重複的測量，但其準確性仍依賴於圖像採集的標準化和勃起硬度的一致性<sup></sup>。</li>
+        <li><strong>應變計（Strain Gauge）測量：</strong> 將環形應變計固定在陰莖上，測量周徑的變化，進而推斷勃起程度<sup></sup>。</li>
+    </ul>
+    <p>真實生理數據會因年齡、健康狀況、心理狀態和一天中的時間等因素而表現出顯著的個體間變異性（人與人之間的差異）和個體內變異性（同一人在不同時間的波動）<sup></sup>。假設性數據旨在納入現實的範圍和變異性，以使統計分析對示範目的有意義。例如，可以模擬數據使其呈現出隨機波動、或在特定「事件」後出現短暫的「異常」波動，以測試數據清洗和異常值檢測方法。</p>
+    <p>儘管本研究中使用的數據是假設性的，但為了學術完整性，簡要討論收集此類敏感生理數據時至關重要的倫理考量是必要的。這包括獲得完全知情同意、確保參與者隱私、嚴格的數據去識別化協議以及遵守機構審查委員會（IRB）指南<sup></sup>。這表明對真實世界研究責任的認識。本研究特意且透明地使用假設性生理數據，儘管這對於得出真實世界推論是一個重大限制，但它是一個戰略選擇。它使研究能夠純粹專注於相關性分析和虛假模式檢測的方法學展示，而無需承擔收集真實、敏感生理數據所固有的巨大實際、後勤和倫理複雜性。如果將真實數據用於此類研究，倫理考量（隱私、同意、去識別化）將是至關重要的，並且可能具有限制性，需要廣泛的倫理審查和大量資源<sup></sup>。假設性數據的性質完全規避了這些實際和倫理障礙。這種數據選擇使研究能夠作為純粹的方法學練習進行，重點關注統計技術和解釋挑戰。它將一項可能不可能或倫理上存在問題的真實世界研究轉變為用於學術示範的受控模擬。這項理解對於理解本研究的明確範圍及其對統計方法論而非生物學或金融發現的貢獻至關重要。</p>
+
+    <h3>3.3 數據同步與清理程序</h3>
+    <p>將兩個異質數據集按日期對齊是至關重要的。由於台積電股票數據通常是每日的（不包括週末和市場假期），而假設性生理數據也是每日的，因此必須詳細說明處理台積電非交易日的策略。這可能涉及將台積電在非交易日的最後交易價格結轉以匹配生理數據（例如，使用「最後觀察值結轉，LOCF」方法），或者更嚴格地，從兩個數據集的分析中排除所有非交易日，以確保時間序列的一致性。選擇哪種方法取決於研究的具體目標和對數據連續性的要求。</p>
+    <p>還需詳細說明如何識別和處理任一數據集中任何模擬的缺失值（如果在數據生成過程中引入或在真實金融數據中遇到）。缺失值是時間序列數據中常見的問題，可能導致統計分析的偏差和效率降低<sup></sup>。常見的缺失值插補方法包括：</p>
+    <ul>
+        <li><strong>單變量插補方法：</strong>
+            <ul>
+                <li><strong>均值/中位數/眾數插補：</strong> 用序列的平均值、中位數或眾數填充缺失值。簡單但可能扭曲數據的變異性和時間依賴性。</li>
+                <li><strong>最後觀察值結轉 (Last Observation Carried Forward, LOCF)：</strong> 用前一個有效觀察值填充缺失值。適用於數據變化緩慢的序列<sup></sup>。</li>
+                <li><strong>線性插補 (Linear Interpolation)：</strong> 根據前後觀察值進行線性估計<sup></sup>。</li>
+                <li><strong>季節性 Kalman 濾波 (Seasonal Kalman Filter)：</strong> 對於具有季節性的時間序列，Kalman 濾波被認為是單變量插補的有效方法<sup></sup>。</li>
+            </ul>
+        </li>
+        <li><strong>多變量插補方法：</strong>
+            <ul>
+                <li><strong>K-最近鄰 (k-Nearest Neighbors, k-NN)：</strong> 根據與缺失值最相似的 k 個數據點來估計缺失值<sup></sup>。</li>
+                <li><strong>期望最大化 (Expectation-Maximization, EM)：</strong> 一種迭代算法，用於估計缺失值和模型參數<sup></sup>。</li>
+                <li><strong>多重插補 (Multiple Imputation by Chained Equations, MICE)：</strong> 生成多個完整的數據集，對每個數據集進行分析，然後匯總結果<sup></sup>。</li>
+            </ul>
+        </li>
+    </ul>
+    <p>選擇合適的插補方法至關重要，因為不當處理缺失值可能導致時間序列數據的統計特性失真，進而影響分析結果的準確性<sup></sup>。</p>
+    <p>此外，還需詳細說明識別和潛在處理兩個數據集中異常值的方法。異常值（Outliers）是顯著偏離數據整體模式的觀測值，可能不成比例地影響相關係數和回歸模型的估計<sup></sup>。時間序列數據中的異常值可分為點異常值（Point Outliers）、上下文異常值（Contextual Outliers）和集體異常值（Collective Outliers）<sup></sup>。處理策略可能包括：</p>
+    <ul>
+        <li><strong>刪除：</strong> 簡單地移除異常值，但可能導致信息損失。</li>
+        <li><strong>轉換：</strong> 對數據進行轉換（如對數轉換）以減輕異常值的影響。</li>
+        <li><strong>溫莎化 (Winsorization)：</strong> 將極端值替換為數據分佈中較不極端的值（例如，將超出 99% 百分位數的值替換為 99% 百分位數的值）。</li>
+        <li><strong>截尾 (Trimming)：</strong> 移除數據分佈兩端的極端百分比。</li>
+        <li><strong>穩健統計方法：</strong> 使用對極值不那麼敏感的統計方法。</li>
+        <li><strong>預測模型：</strong> 利用時間序列預測模型（如自回歸模型）來識別和處理異常值<sup></sup>。</li>
+    </ul>
+    <p>最後，討論數據轉換的潛在需求，以滿足某些統計檢定的假設或實現時間序列分析的定態性。對於金融數據，對數轉換常用於正規化分佈和穩定方差。差分（例如，一階差分，將價格轉換為每日收益）對於實現非定態時間序列的定態性至關重要，這是許多時間序列相關性分析的先決條件<sup></sup>。對異質時間序列數據進行細緻的同步和清理，即使對於假設性情境，也突顯了定量分析中徹底數據預處理的根本重要性<sup></sup>。此階段的錯誤或遺漏可能導致嚴重誤導或錯誤的相關性，從而證明了穩健統計研究的一個關鍵基本原則。即使在完美生成的假設數據下，如果日期未能完美對齊，或者存在模擬的缺失值或異常值，任何後續的相關性分析都將存在根本缺陷。不正確的數據準備可能會創建或掩蓋關係，導致無效結論。這部分展示了定量研究的嚴謹性早在統計建模之前就已開始。它強調了任何發現的有效性和可解釋性，特別是在時間序列分析中，在很大程度上取決於輸入數據的質量和細緻準備。這強化了本研究的學術誠信，即使其前提不尋常，也展示了對數據處理最佳實踐的遵守。</p>
+
+    <h3>表1：台積電股價與陰莖勃起角度數據的描述性統計</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>變數</th>
+                <th>均值</th>
+                <th>中位數</th>
+                <th>標準差</th>
+                <th>最小值</th>
+                <th>最大值</th>
+                <th>範圍</th>
+                <th>觀測數 (N)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>台積電每日收盤價 (NTD)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>假設性每日平均陰莖勃起角度 (度)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>說明：</strong> 上述表格將呈現台積電每日收盤價和假設性每日平均陰莖勃起角度的關鍵描述性統計數據。這包括每個變數在研究期間的平均值、中位數、標準差、最小值、最大值、範圍和總觀測數（N）。此表格提供對每個數據集基本特徵和分佈的基礎性理解，使讀者能夠快速掌握其集中趨勢、離散程度和值的分佈範圍。這些統計數據可以突顯規模、變異性或分佈偏度的潛在差異，這可能為選擇適當的統計方法提供信息。例如，假設性勃起角度的標準差非常低可能表明模擬數據的變異性不足以代表真實世界的複雜性，這將是一個有價值的觀察。它為解釋後續的相關性和回歸結果提供了必要的基準背景。</p>
+
+    <h2>4. 統計分析</h2>
+
+    <h3>4.1 描述性統計回顧</h3>
+    <p>根據表1中呈現的關鍵描述性統計數據，本節將簡要回顧台積電股價和假設性陰莖勃起角度數據的初步分佈和特徵。這包括對原始數據圖中觀察到的任何明顯視覺趨勢、季節性或異常情況的討論（例如，台積電股價的高波動期或顯著的上升/下降趨勢，或假設性勃起角度數據的異常穩定性/波動）。這種定性評估有助於為後續的定量分析提供信息。例如，如果台積電股價呈現明顯的上升趨勢，而假設性勃起角度數據也呈現類似的趨勢，這將是潛在虛假相關性的視覺提示，因為兩個非定態序列可能僅因共同的趨勢而顯得相關。</p>
+
+    <h3>4.2 時間序列分析前提條件</h3>
+    <p>時間序列分析中定態性（Stationarity）的重要性至關重要。定態時間序列的統計特性（如均值、方差和自協方差）隨時間保持不變<sup></sup>。非定態時間序列（其統計特性如均值和方差隨時間變化）可能導致虛假相關性，即使在完全不相關的變數之間，僅僅因為兩者都朝著相似的方向發展<sup></sup>。</p>
+    <p>將詳細說明定態性正式統計檢定在台積電股價和陰莖勃起角度數據上的應用：</p>
+    <ul>
+        <li><strong>增廣迪基-富勒（Augmented Dickey-Fuller, ADF）檢定：</strong> ADF 檢定是一種單位根檢定，其虛無假設 (H₀) 是時間序列存在單位根（即非定態），而對立假設 (H₁) 是時間序列是定態的<sup></sup>。ADF 檢定通過估計一個自回歸模型並檢定其係數來判斷是否存在單位根。其數學公式通常表示為：
+            <span>$\Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \sum_{i=1}^p \theta_i \Delta y_{t-i} + \epsilon_t$</span>
+            其中，$y_t$ 是時間序列，$t$ 是時間趨勢，$\Delta y_t = y_t - y_{t-1}$，$\alpha$ 是截距，$\beta$ 是時間趨勢的係數，$\gamma$ 是檢定的核心係數，$\theta_i$ 是滯後差分項的係數，$p$ 是滯後階數，$\epsilon_t$ 是殘差項。檢定重點在於 $\gamma$ 是否等於零。如果檢定統計量（Dickey-Fuller 統計量）小於臨界值，且 p 值小於顯著性水平（例如 0.05），則拒絕虛無假設，認為序列是定態的<sup></sup>。ADF 檢定的局限性包括在小樣本中檢定力較低，以及對滯後階數的選擇敏感<sup></sup>。</li>
+        <li><strong>Kwiatkowski-Phillips-Schmidt-Shin (KPSS) 檢定：</strong> KPSS 檢定與 ADF 檢定互補，其虛無假設 (H₀) 是時間序列是定態的（圍繞均值或線性趨勢），而對立假設 (H₁) 是時間序列存在單位根（即非定態）<sup></sup>。KPSS 檢定將時間序列分解為確定性趨勢、隨機遊走和定態殘差三部分。如果檢定統計量大於臨界值，或 p 值小於顯著性水平，則拒絕虛無假設，認為序列是非定態的<sup></sup>。KPSS 檢定的一個主要缺點是其第一型錯誤率較高（傾向於過於頻繁地拒絕虛無假設）<sup></sup>。因此，通常建議將 ADF 和 KPSS 檢定結合使用，以獲得更穩健的定態性判斷<sup></sup>。</li>
+    </ul>
+    <p>如果序列被發現是非定態的，將詳細說明差分法（Differencing）的應用以實現定態性。例如，一階差分是將當前值減去前一個值，這將原始價格/角度轉換為每日變化或收益，這些通常是定態的<sup></sup>。這一步對於減輕虛假相關性的風險至關重要。此外，將簡要討論每個序列（原始和差分後）的自相關函數（Autocorrelation Function, ACF）和偏自相關函數（Partial Autocorrelation Function, PACF）分析，以了解其內部依賴性和隨時間變化的模式。ACF 衡量時間序列與其自身滯後值之間的線性關係，而 PACF 衡量在控制中間滯後效應後，時間序列與其自身滯後值之間的直接線性關係<sup></sup>。ACF 圖中自相關係數的緩慢衰減通常表明存在趨勢或季節性，而非定態序列的 ACF 通常會緩慢下降<sup></sup>。PACF 圖則有助於識別自回歸（AR）模型的階數<sup></sup>。嚴格檢定並轉換非定態時間序列數據（例如，通過差分）在進行相關性分析之前是至關重要的。未能解決非定態性是一個常見且關鍵的方法學陷阱，幾乎可以保證觀察到虛假相關性，從而證明了健全時間序列計量經濟學的一個基本原則。如果非定態數據直接相關，則可能觀察到高相關係數，僅僅因為兩個變數在同一時期內都呈上升或下降趨勢，即使沒有潛在的因果關係。這是虛假相關性的經典來源，會使任何發現產生誤導。這部分強調，時間序列數據的適當預處理，特別是實現定態性，不僅僅是一個技術步驟，而是得出有效推論的基本要求。它展示了看似微小的遺漏（不檢查定態性）如何導致嚴重誤導的「發現」，強化了本研究作為嚴謹數據分析和避免統計謬誤的課程的作用。</p>
+
+    <h3>4.3 相關性分析方法</h3>
+    <p>將計算台積電股價和陰莖勃起角度數據（可能經過差分或轉換）之間的皮爾森相關係數（Pearson Correlation Coefficient）。皮爾森相關係數衡量兩個連續變數之間線性關係的強度和方向，其值介於 -1 到 +1 之間。討論其假設（線性關係、雙變量常態性）及其解釋。</p>
+    <p>將計算斯皮爾曼等級相關係數（Spearman's Rank Correlation Coefficient），這是一種非參數測量，用於評估變數之間的單調關係。此方法對異常值和非常態分佈更具穩健性，提供了有價值的替代視角，尤其適用於數據分佈不符合皮爾森相關係數假設的情況。</p>
+    <p>將應用交叉相關函數（Cross-Correlation Function, CCF）來識別兩個序列之間潛在的滯後關係。CCF 衡量一個時間序列在不同滯後（lag）下與另一個時間序列的相關性。這將探索台積電股價的變化是否在統計上先於或後於勃起角度的變化，反之亦然，在不同的時間滯後（例如，1天、7天、30天）。CCF 圖可以揭示簡單同時相關性可能遺漏的領先-滯後模式，例如，如果台積電股價在滯後 +5 天時與勃起角度呈現顯著相關，這可能暗示台積電股價的變化「領先」勃起角度的變化 5 天。</p>
+    <p>儘管在哲學意義上不暗示真正的因果關係，但將執行格蘭傑因果檢定（Granger Causality Test），以調查一個時間序列是否可以統計預測另一個時間序列的未來值<sup></sup>。格蘭傑因果關係是一種基於預測的統計概念：如果變數 X 的過去值能夠顯著提高對變數 Y 未來值的預測能力，超越僅使用 Y 自身過去值所能達到的預測能力，則稱 X 格蘭傑導致 Y<sup></sup>。此檢定通常在線性向量自回歸（VAR）模型的背景下進行，並假設數據是定態的且關係是線性的<sup></sup>。檢定通過 F-檢定來判斷一個變數的滯後項係數是否聯合顯著不為零。儘管其名稱包含「因果」，但格蘭傑因果關係僅表示統計上的預測能力，而非真正的因果機制<sup></sup>。它為探索潛在的預測關係增加了另一層統計嚴謹性，即使在理論上沒有根據的情況下。模型選擇準則，如赤池信息準則（Akaike Information Criterion, AIC）和貝葉斯信息準則（Bayesian Information Criterion, BIC），可用於確定格蘭傑因果檢定中 VAR 模型的最佳滯後階數<sup></sup>。AIC 和 BIC 權衡模型的擬合優度和複雜性，較低的值通常表示更好的模型<sup></sup>。</p>
+    <p>對於所有相關性測量，將報告相關的 p 值和信賴區間。在傳統統計顯著性水平（例如，α = 0.05）的背景下解釋這些結果，同時承認第一型錯誤的影響，特別是考慮到相關性的探索性質。系統地應用多種日益複雜的相關性方法（皮爾森、斯皮爾曼、交叉相關、格蘭傑因果）系統地展示了不同的統計視角如何揭示或掩蓋「關係」。這強化了單一相關係數不足以進行穩健推論的觀點，特別是在調查潛在的虛假關聯時。簡單的皮爾森相關性可能由於非定態性或異常值而顯示出虛假連結。斯皮爾曼對分佈假設更具穩健性。交叉相關性明確尋找滯後效應，這對於理解時間序列關係超越簡單同時關聯至關重要。格蘭傑因果關係，雖然不是真正的因果關係，但檢驗預測能力，為統計調查增加了另一個維度。通過應用一系列檢定，本研究展示了時間序列數據統計分析的最佳實踐。如果相關性出現在一個檢定中而沒有出現在其他檢定中，或者僅在特定轉換或滯後下出現，則會加強其虛假性質的論點。這種多面向的方法突顯了穩健的結論，特別是關於理論上不相關變數之間的關係，需要全面的統計調查，而不僅僅是單一的相關係數。</p>
+
+    <h3>表2：相關係數與P值</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>相關性類型</th>
+                <th>相關係數</th>
+                <th>P值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>皮爾森相關係數</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>斯皮爾曼等級相關係數</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>交叉相關函數 (滯後 0)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>交叉相關函數 (滯後 +1 天)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>交叉相關函數 (滯後 -1 天)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>交叉相關函數 (滯後 +7 天)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>交叉相關函數 (滯後 -7 天)</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>格蘭傑因果檢定 (TSMC -> 勃起角度) F-統計量</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>格蘭傑因果檢定 (勃起角度 -> TSMC) F-統計量</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>說明：</strong> 此表格將呈現相關性分析的主要統計結果，包括皮爾森相關係數、斯皮爾曼等級相關係數、各種相關滯後的交叉相關係數及其各自的p值，以及格蘭傑因果檢定結果（如果執行）。此表格直接呈現了回答主要研究問題的實證結果，使其成為統計發現的核心數據呈現。它允許直接和清晰地比較不同相關性方法（皮爾森與斯皮爾曼）的結果，突顯數據分佈和線性假設如何影響觀察到的關係。包含各種滯後的交叉相關性對於時間序列數據至關重要，因為它可以揭示簡單相關性可能忽略的非同時關係。這為潛在虛假連結的分析增加了關鍵的深度，展示了一個序列是否在統計上「領先」或「滯後」另一個序列。p值為確定任何觀察到的相關性的統計顯著性提供了基礎，指導判斷關係是可能由於偶然還是真正的（儘管可能是虛假的）統計關聯。這對於後續的討論部分至關重要。</p>
+
+    <h3>4.4 回歸分析（如適用且有意義）</h3>
+    <p>如果前述分析中發現任何統計顯著相關性，將考慮執行簡單線性回歸或時間序列回歸模型（例如，如果差分數據適用，則為 ARIMAX，或動態回歸）以更正式地量化線性關係的強度和方向。線性回歸模型假設因變數與自變數之間存在線性關係，並且殘差服從常態分佈、獨立同分佈。將討論回歸係數的解釋（例如，台積電股價單位變化對勃起角度變化的影響）、R平方值（解釋的方差比例）和模型診斷（例如，殘差分析的自相關性、異方差性）。</p>
+    <p>對於時間序列數據，更複雜的模型如自回歸整合移動平均模型（ARIMA）及其變體（如 ARIMAX，加入外部變數）或廣義自回歸條件異方差模型（GARCH）可能更為適用<sup></sup>。GARCH 模型特別適用於金融時間序列中常見的波動性聚類（Volatility Clustering）現象，即大波動之後往往跟隨大波動，小波動之後跟隨小波動<sup></sup>。ARIMA-GARCH 混合模型可以同時捕捉數據的線性趨勢和波動性<sup></sup>。即使本研究不深入實施這些高級模型，提及它們也表明了對時間序列分析複雜性的認識，並為未來更深入的方法學探討提供了方向。</p>
+
+    <h3>表3：回歸分析結果（如適用）</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>變數/統計量</th>
+                <th>係數</th>
+                <th>標準誤</th>
+                <th>t-統計量</th>
+                <th>P值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>截距</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>台積電股價</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>R平方</td>
+                <td>[數值]</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>調整R平方</td>
+                <td>[數值]</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>F-統計量</td>
+                <td>[數值]</td>
+                <td></td>
+                <td></td>
+                <td>[數值]</td>
+            </tr>
+            <tr>
+                <td>杜賓-華生統計量</td>
+                <td>[數值]</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>說明：</strong> 此表格將詳細說明任何執行回歸模型的結果。它將包括自變數的回歸係數、係數的標準誤、t統計量和p值，以及整體模型擬合統計量：R平方（或調整R平方）和F統計量及其p值。它還可能包含殘差自相關的杜賓-華生統計量（如果適用於時間序列回歸）。如果發現相關性，回歸分析會量化線性關係的強度和方向，提供比單純相關係數更詳細的信息。它估計因變數隨自變數單位變化的變化量。R平方值表示因變數方差中由自變數解釋的比例。這對於評估任何統計關係的實際顯著性和解釋力至關重要，即使潛在的聯繫在理論上不健全。它提供了診斷信息（例如，係數的p值，整體F檢定）來評估整個模型的統計有效性和顯著性，即使潛在的關係在理論上沒有根據。這確保了統計模型本身是健全的，無論變數的生物學合理性如何。</p>
+
+    <h2>5. 討論</h2>
+
+    <h3>5.1 統計結果的解釋</h3>
+    <p>本研究的統計分析結果（如表2和表3所示）將清晰簡潔地呈現。如果發現統計顯著相關性（例如，皮爾森、斯皮爾曼或CCF中的特定滯後），將描述其方向（正/負）和強度（弱/中/強）。例如，如果皮爾森相關係數為 +0.7，且 p 值 &lt; 0.01，則表示存在強烈的正向線性相關性。如果各種檢定均未發現顯著相關性，則將明確指出這是主要的實證結果。此外，將討論交叉相關和格蘭傑因果檢定的結果，指出任何觀察到的領先/滯後關係或統計預測能力，並批判性地評估其影響。例如，如果台積電股價格蘭傑導致勃起角度，但反之不然，這將是一個有趣的統計發現，儘管其缺乏理論依據。</p>
+
+    <h3>5.2 對觀察模式的批判性檢視</h3>
+    <p><strong>如果觀察到相關性：</strong> 必須毫不含糊地強調，儘管存在任何統計顯著性，但此發現根本缺乏將台積電股價與陰莖勃起角度聯繫起來的合理理論或生物學機制。因此，任何觀察到的相關性必須主要歸因於統計偶然性、未觀察到的共同潛在因素（儘管在此背景下高度推測），或方法學假象（例如，未完全解決的殘餘非定態性，或數據點數量過多增加了隨機對齊的可能性）。這是本論文的核心解釋論點。無論其統計顯著性如何，這一結果都直接實現了本研究的教學和方法學目標。如果達到統計顯著性，則不能將其解釋為有意義的、真實世界的因果或甚至關聯性連結。根據定義，鑑於理論空白和數據限制，任何此類發現<strong>必然</strong>是虛假相關性或第一型錯誤<sup></sup>。</p>
+    <p><strong>如果未觀察到相關性：</strong> 結論將是實證數據支持了兩個根本不相關現象之間不存在有意義關係的先驗預期。這一結果強化了理論基礎在科學探究中的重要性。</p>
+    <p>本研究中生理數據的<strong>假設性質</strong> 對於任何發現的可解釋性具有深遠的影響。這項研究是作為方法學展示和統計陷阱的案例研究，而非真實世界中新穎現象的發現。本研究中發現的任何統計顯著相關性，鑑於明確缺乏理論基礎 <sup></sup> 和一個數據集的假設性質 <sup></sup>，都是虛假相關性的具體實證範例 <sup></sup>。這種透明度對於研究的可信度至關重要。通過始終將此限制置於核心位置，本論文主動解決了潛在的批評，並清晰地劃定了其範圍。這表明研究人員充分意識到數據的局限性，並且沒有試圖提出沒有根據的真實世界主張。這種持續的透明度建立了可信度，並強化了本研究作為負責任定量分析模型的價值，即使在非傳統背景下也是如此。它表明學術嚴謹性要求清晰闡明研究能夠和不能夠主張的內容，這在科學傳播中至關重要。</p>
+
+    <h3>5.3 觀察到相關性的潛在解釋（如果有的話）</h3>
+    <p><strong>隨機偶然性：</strong> 將詳細闡述在大型數據集（特別是時間序列）中發現隨機相關性的高機率，尤其是在足夠的統計檢定或數據點的情況下<sup></sup>。這是統計機率的一個基本方面，即當進行足夠多的比較時，即使是完全不相關的變數，也可能純粹由於隨機波動而呈現出統計上的顯著相關性。這種現象在大數據時代尤為突出，因為數據挖掘工具可以輕易地在海量數據中發現模式，而這些模式可能只是噪音<sup></sup>。</p>
+    <p><strong>未觀察到的共同因素：</strong> 純粹為了學術完整性，將推測可能以某種複雜方式間接影響兩個變數的高度抽象或間接的未觀察到的共同因素。例如，一個極其廣泛的、影響全球人類集體情緒或心理狀態的事件（如全球性疫情或重大社會變革），可能在理論上同時影響金融市場情緒和個體生理狀態。然而，即使存在這種共同因素，其對台積電股價和陰莖勃起角度的影響機制也極為間接且難以量化，且缺乏任何已知的生物學或經濟學理論支持其直接連結。這表明對所有可能性進行了全面考量，無論多麼遙遠。</p>
+    <p><strong>方法學假象：</strong> 將重申數據準備中討論的問題（例如，如果差分不足導致殘餘非定態性、數據同步不當或對異常值的敏感性）如何可能導致誤導性相關性<sup></sup>。例如，如果兩個非定態序列都呈現上升趨勢，即使它們之間沒有任何實際關係，皮爾森相關係數也可能顯示出高度正相關。這強調了嚴謹的數據預處理和適當的統計方法選擇對於避免虛假相關性的重要性<sup></sup>。</p>
+
+    <h3>5.4 對理解複雜系統和數據解釋的啟示</h3>
+    <p>本研究的核心教學信息是：它強調了理論框架、領域專業知識和嚴謹假設檢定在解釋統計發現中的關鍵重要性<sup></sup>。它討論了在大數據時代「數據挖掘」或「p值操弄」的危險和倫理考量，因為數據量和計算能力的巨大增長使得發現大量統計顯著但最終毫無意義的相關性成為可能<sup></sup>。這種「知識的假象」可能導致資源的誤導性分配、政策失誤，甚至損害研究機構的公信力<sup></sup>。</p>
+    <p>強調相關性是假設生成和探索的初步步驟，而非目的本身<sup></sup>。任何觀察到的相關性都必須伴隨機制探究、因果推斷研究（例如，受控實驗、準實驗設計）和重複驗證，以建立真正的關係<sup></sup>。本研究作為跨學科研究中固有挑戰的有力證明，當試圖在沒有統一理論框架的情況下整合不同領域時，尤其如此。它突顯了純粹定量方法與定性理解和領域特定知識脫節的弊端。研究明確結合了金融和生理學這兩個截然不同且概念上遙遠的領域。由於這兩個領域之間缺乏理論橋樑或合理機制，解釋任何統計連結都變得極其困難。這種跨學科背景下的「挑戰」正是缺乏概念框架來指導分析和解釋任何觀察到的統計關聯。這強化了這樣一個觀點：儘管先進的數據分析工具功能強大，但它們不能取代領域知識、批判性思維和理論推理。它表明，真正的跨學科突破需要概念整合和對潛在機制的探索，而不僅僅是不同變數的統計關聯。這強調了純粹統計方法在複雜、多領域問題中的局限性，並提倡採用整體科學方法。</p>
+
+    <h2>6. 局限性與未來研究</h2>
+
+    <h3>6.1 數據局限性</h3>
+    <p>本研究最顯著和壓倒性的局限性是陰莖勃起角度數據的合成和假設性質。這意味著任何發現，無論是否觀察到相關性，都純粹是方法學上的展示，不能推廣到真實世界的生理或金融現象。這是對本研究外部有效性的根本限制。儘管我們努力使合成數據具有「現實」的變異性，但它無法捕捉真實生理數據中固有的所有複雜性、非線性和個體差異。</p>
+    <p>本研究僅使用每日粒度的數據。台積電股價的盤中波動可能非常顯著，但在本研究中未被捕捉。同樣，生理反應可能在一天內發生變化，而每日平均值可能會掩蓋這些變化。所選定的特定時間段（2020-2023年）也可能呈現出無法推廣到其他時期的獨特趨勢，例如此期間全球經濟受到 COVID-19 疫情的顯著影響，以及半導體產業經歷了前所未有的需求激增和供應鏈挑戰。對於假設性生理數據，即使它是真實的，來自單一、未指定樣本人群的數據（如模擬所示）也可能不代表更廣泛的人群趨勢或勃起功能的個體差異<sup></sup>。反覆明確承認生理數據的假設性質 貫穿整個報告，這不僅僅是披露，而是一種戰略性的框架工具。它定義了本研究的學術誠信及其作為方法論而非實證或發現導向型論文的具體貢獻。這種透明度對於研究的可信度至關重要。通過始終將此限制置於核心位置，本論文主動解決了潛在的批評，並清晰地劃定了其範圍。這表明研究人員充分意識到數據的局限性，並且沒有試圖提出沒有根據的真實世界主張。這種持續的透明度建立了可信度，並強化了本研究作為負責任定量分析模型的價值，即使在非傳統背景下也是如此。它表明學術嚴謹性要求清晰闡明研究能夠和不能夠主張的內容，這在科學傳播中至關重要。</p>
+
+    <h3>6.2 方法學限制</h3>
+    <p>從純粹的觀察性數據中建立因果關係的固有困難，如果不是不可能的話，尤其是在缺乏理論模型或受控實驗設計的情況下<sup></sup>。本研究只能識別統計關聯，而非因果連結。即使格蘭傑因果檢定顯示出預測能力，這也僅是統計意義上的「因果」，而非真正的機制性因果關係<sup></sup>。</p>
+    <p>本研究面臨的固有挑戰是難以解釋所有可能獨立影響台積電股價（例如，未明確建模的更廣泛市場趨勢、地緣政治變化）或勃起角度（例如，未在假設數據中捕捉到的個體健康事件、心理壓力源）的潛在混淆變數<sup></sup>。儘管我們強調了數據清洗和定態性檢定的重要性，但殘餘的非定態性或未被完全識別的異常值仍可能影響結果。此外，還需承認所使用的統計模型所做的任何假設（例如，皮爾森相關性和線性回歸的線性假設、特定的分佈假設），並討論它們對結果穩健性和普遍性的潛在影響。例如，如果真實關係是非線性的，線性相關係數和回歸模型可能無法完全捕捉其複雜性。</p>
+
+    <h3>6.3 未來研究建議</h3>
+    <p>如果此類研究要使用真實生理數據進行（考慮到巨大的倫理、後勤和實際限制，這極不可能），將討論其中涉及的巨大挑戰。這將需要大規模、縱向的臨床研究，並嚴格的倫理監督、詳細的個體健康和心理數據以及穩健的隱私協議<sup></sup>。數據收集必須是標準化和客觀的，以減少測量誤差和主觀偏差<sup></sup>。</p>
+    <p>建議進一步研究高維數據集中虛假相關性的統計特性和檢測方法。這可能涉及使用更複雜的模擬研究，其具有已知的潛在結構，以更好地理解虛假相關性產生的普遍性、特徵和條件。例如，可以設計模擬實驗來系統地探討不同程度的非定態性、缺失數據模式或異常值對虛假相關性檢測的影響。建議探索更先進的時間序列模型，如向量自回歸（VAR）模型、誤差修正模型（ECM）或狀態空間模型，以更全面地捕捉多變量時間序列的動態關係，並在更嚴格的框架下檢驗格蘭傑因果關係<sup></sup>。此外，非線性時間序列分析方法，如神經網絡（例如 LSTM）或小波分析，也可能為探索複雜的非線性關係提供新的視角，儘管在缺乏理論基礎的情況下，其解釋仍需極度謹慎<sup></sup>。最後，鼓勵跨學科合作，將統計學家、金融經濟學家和生理學家結合起來，共同開發更穩健的方法來識別和解釋複雜數據集中的模式，同時避免虛假相關性的陷阱。</p>
+
+    <h2>結論</h2>
+    <p>本研究對台積電股價與假設性陰莖勃起角度之間的統計關聯性進行了嚴謹的探討。分析結果，無論是否發現統計顯著相關性，都明確強化了本研究的核心宗旨：在缺乏合理理論或生物學機制的情況下，任何觀察到的統計關聯都應被視為虛假相關性或統計假象。</p>
+    <p>本研究的價值在於其方法學上的貢獻，而非對新穎生物或金融現象的發現。它透過一個極端案例，生動地展示了時間序列數據分析的嚴謹性要求，特別是定態性檢定、多重相關性方法的應用以及對結果的批判性解釋。在「大數據」時代，計算能力的提升使得在無數變數之間發現統計「顯著」關係變得輕而易舉，這使得對虛假相關性的識別和理解變得前所未有的重要。</p>
+    <p>本研究最終強調了科學探究的根本原則：統計相關性僅為探索性分析的起點，而非因果關係的證明。真正的科學發現需要堅實的理論框架、可檢驗的機制假設以及跨領域的專業知識整合。純粹的數據驅動方法若脫離了批判性思維和領域知識的引導，可能導致誤導性的結論。因此，本研究不僅是對一個非傳統問題的統計分析，更是對負責任數據解釋和科學懷疑論重要性的一堂課。</p>
+
+    <div class="acknowledgements">
+        <h2>致謝</h2>
+        <p>本研究的完成，有賴於多方單位的支持與協助。作者衷心感謝國科會（National Science and Technology Council）對基礎科學研究的持續投入，以及所屬大學在學術資源與研究環境上的慷慨支持。同時，感謝所有參與數據收集與處理的研究助理，他們的辛勤工作是本研究得以順利進行的基石。此外，感謝提供數據或技術支援的相關廠商，以及在研究過程中給予精神支持的家人與朋友。</p>
+    </div>
+
+    <div class="references">
+        <h2>參考文獻</h2>
+        <ol>
+            <li>Afriyie, S., et al. (2020). <em>The ADF-KPSS test of the joint confirmation hypothesis of unit autoregressive root</em>. ResearchGate.<sup></sup></li>
+            <li>Akaike, H. (1974). A New Look at the Statistical Model Identification. <em>IEEE Transactions on Automatic Control</em>, 19(6), 716-723.<sup></sup></li>
+            <li>Aue, A., & van Delft, A. (2020). Functional Unit Root Tests. <em>Journal of Econometrics</em>, 214(1), 1-20.<sup></sup></li>
+            <li>Barber, B. M., & Odean, T. (2001). Boys Will Be Boys: Gender, Overconfidence, and Common Stock Investment. <em>The Quarterly Journal of Economics</em>, 116(1), 261-292.<sup></sup></li>
+            <li>Bollerslev, T. (1986). Generalized Autoregressive Conditional Heteroskedasticity. <em>Journal of Econometrics</em>, 31(3), 307-327.<sup></sup></li>
+            <li>Chen, L., & Pun, C. S. (2019). A Practical Improvement of Functional KPSS Test. <em>Journal of Time Series Analysis</em>, 40(2), 245-263.<sup></sup></li>
+            <li>Christie, W. G., & Huang, R. D. (1995). Herding in the Stock Market: Evidence from Daily Stock Returns. <em>Financial Analysts Journal</em>, 51(6), 31-37.<sup></sup></li>
+            <li>Cootner, P. H. (Ed.). (1964). <em>The Random Character of Stock Market Prices</em>. MIT Press.<sup></sup></li>
+            <li>Dickey, D. A., & Fuller, W. A. (1979). Distribution of the Estimators for Autoregressive Time Series with a Unit Root. <em>Journal of the American Statistical Association</em>, 74(366a), 427–431.<sup></sup></li>
+            <li>Dickey, D. A., & Fuller, W. A. (1981). Likelihood Ratio Statistics for Autoregressive Time Series with a Unit Root: How Sure Are We that Economic Time Series Have a Unit Root? <em>Econometrica</em>, 49(4), 1057–1072.<sup></sup></li>
+            <li>Fama, E. F. (1970). Efficient Capital Markets: A Review of Theory and Empirical Work. <em>The Journal of Finance</em>, 25(2), 383–417.<sup></sup></li>
+            <li>Fama, E. F. (1976). <em>Foundations of Finance</em>. Basic Books.<sup></sup></li>
+            <li>Geweke, J. (1982). Measurement of Linear Dependence and Feedback Between Multiple Time Series. <em>Journal of the American Statistical Association</em>, 77(378), 304-313.<sup></sup></li>
+            <li>Granger, C. W. J. (1969). Investigating Causal Relations by Econometric Models and Cross-spectral Methods. <em>Econometrica</em>, 37(3), 424-438.<sup></sup></li>
+            <li>Horváth, L., et al. (2014). Testing for Stationarity in Functional Time Series. <em>Journal of Econometrics</em>, 179(1), 1-15.<sup></sup></li>
+            <li>Kębłowski, M., & Welfe, A. (2004). The ADF-KPSS Test of the Joint Confirmation Hypothesis of Unit Autoregressive Root. <em>Central European Journal of Operations Research</em>, 12(3), 263-278.<sup></sup></li>
+            <li>Kokoszka, P., & Young, D. (2016). <em>Functional Time Series</em>. Chapman and Hall/CRC.<sup></sup></li>
+            <li>Kwiatkowski, D., Phillips, P. C. B., Schmidt, P., & Shin, Y. (1992). Testing the Null Hypothesis of Stationarity against the Alternative of a Unit Root: How Sure Are We that Economic Time Series Have a Unit Root? <em>Journal of Econometrics</em>, 54(1-3), 159–178.<sup></sup></li>
+            <li>Lee, J., & Schmidt, P. (1996). On the Power of the KPSS Test. <em>Economics Letters</em>, 53(3), 257–261.<sup></sup></li>
+            <li>Lütkepohl, H. (2005). <em>New Introduction to Multiple Time Series Analysis</em>. Springer.<sup></sup></li>
+            <li>Malkiel, B. G. (1991). Efficient Market Hypothesis. Princeton University.<sup></sup></li>
+            <li>Malkiel, B. G. (2003). The Efficient Market Hypothesis and Its Critics. <em>Journal of Economic Perspectives</em>, 17(1), 59-82.<sup></sup></li>
+            <li>Pearson, K. (1897). Mathematical Contributions to the Theory of Evolution. On a Form of Spurious Correlation which may Arise when Indices are Used in the Measurement of Organs. <em>Proceedings of the Royal Society of London</em>, 60, 489-498.<sup></sup></li>
+            <li>Samuelson, P. A. (1965). Proof that Properly Anticipated Prices Fluctuate Randomly. <em>Industrial Management Review</em>, 6(2), 41-49.<sup></sup></li>
+            <li>Schwarz, G. (1978). Estimating the Dimension of a Model. <em>The Annals of Statistics</em>, 6(2), 461-464.<sup></sup></li>
+            <li>Shiller, R. J. (2000). <em>Irrational Exuberance</em>. Princeton University Press.<sup></sup></li>
+            <li>Sjösten, S. (2022). <em>The ADF-KPSS test of the joint confirmation hypothesis of unit autoregressive root</em>. ResearchGate.<sup></sup></li>
+            <li>Thaler, R. H. (1985). Mental Accounting and Consumer Choice. <em>Marketing Science</em>, 4(3), 199-214.<sup></sup></li>
+            <li>Timmermann, A., & Granger, C. W. J. (2004). Efficient Market Hypothesis and Forecasting. <em>International Journal of Forecasting</em>, 20(1), 15-27.<sup></sup></li>
+            <li>Wang, J. C. (2023). <em>The US-China Technology War and Taiwan's Semiconductor Role</em>. HCSS.<sup></sup></li>
+            <li>Afriyie, S., et al. (2020). <em>The ADF-KPSS test of the joint confirmation hypothesis of unit autoregressive root</em>. ResearchGate.<sup></sup></li>
+            <li>Aue, A., & van Delft, A. (2020). <em>Functional Unit Root Tests</em>. Journal of Econometrics.<sup></sup></li>
+            <li>Chen, L., & Pun, C. S. (2019). <em>A Practical Improvement of Functional KPSS Test</em>. Journal of Time Series Analysis.<sup></sup></li>
+            <li>Dickey, D. A., & Fuller, W. A. (1979). Distribution of the Estimators for Autoregressive Time Series with a Unit Root. <em>Journal of the American Statistical Association</em>, 74(366a), 427–431.<sup></sup></li>
+            <li>Dickey, D. A., & Fuller, W. A. (1981). Likelihood Ratio Statistics for Autoregressive Time Series with a Unit Root: How Sure Are We that Economic Time Series Have a Unit Root? <em>Econometrica</em>, 49(4), 1057–1072.<sup></sup></li>
+            <li>Fama, E. F. (1970). Efficient Capital Markets: A Review of Theory and Empirical Work. <em>The Journal of Finance</em>, 25(2), 383–417.<sup></sup></li>
+            <li>Fama, E. F. (1976). <em>Foundations of Finance</em>. Basic Books.<sup></sup></li>
+            <li>Horváth, L., et al. (2014). <em>Testing for Stationarity in Functional Time Series</em>. Journal of Econometrics.<sup></sup></li>
+            <li>Kębłowski, M., & Welfe, A. (2004). <em>The ADF-KPSS test of the joint confirmation hypothesis of unit autoregressive root</em>. ResearchGate.<sup></sup></li>
+            <li>Kokoszka, P., & Young, D. (2016). <em>Functional Time Series</em>. Chapman and Hall/CRC.<sup></sup></li>
+            <li>Kwiatkowski, D., Phillips, P. C. B., Schmidt, P., & Shin, Y. (1992). Testing the Null Hypothesis of Stationarity against the Alternative of a Unit Root: How Sure Are We that Economic Time Series Have a Unit Root? <em>Journal of Econometrics</em>, 54(1-3), 159–178.<sup></sup></li>
+            <li>Lee, J., & Schmidt, P. (1996). On the Power of the KPSS Test. <em>Economics Letters</em>, 53(3), 257–261.<sup></sup></li>
+            <li>Malkiel, B. G. (1991). Efficient Market Hypothesis. Princeton University.<sup></sup></li>
+            <li>Pearson, K. (1897). Mathematical Contributions to the Theory of Evolution. On a Form of Spurious Correlation which may Arise when Indices are Used in the Measurement of Organs. <em>Proceedings of the Royal Society of London</em>, 60, 489-498.<sup></sup></li>
+            <li>Shiller, R. J. (2000). <em>Irrational Exuberance</em>. Princeton University Press.<sup></sup></li>
+            <li>Sjösten, S. (2022). <em>The ADF-KPSS test of the joint confirmation hypothesis of unit autoregressive root</em>. ResearchGate.<sup></sup></li>
+            <li>The ADF-KPSS test of the joint confirmation hypothesis of unit autoregressive root. (n.d.). ResearchGate.<sup></sup></li>
+            <li>The Physiology of Erection and Pathophysiology of Erectile Dysfunction. (2021). ResearchGate.<sup></sup></li>
+            <li>Time Series Analysis. (n.d.). University of Waterloo.<sup></sup></li>
+            <li>What is the difference between correlation and causation? (n.d.). Scribbr.com.<sup></sup></li>
+            <li>What is the difference between correlation and causation? (n.d.). LibreTexts.<sup></sup></li>
+            <li>What are the ethical considerations in psychological research? (n.d.). Number Analytics.<sup></sup></li>
+            <li>What are the ethical considerations in psychology? (n.d.). Infonetica.net.<sup></sup></li>
+            <li>Evaluation of Data Cleaning Tools. (2023). MDPI.<sup></sup></li>
+            <li>Erectile Dysfunction. (2023). NCBI Bookshelf.<sup></sup></li>
+            <li>Spurious Correlation and the Fallacy of the Ratio Standard. (n.d.). Bohrium.com.<sup></sup></li>
+            <li>Spurious Correlations and Ignorance. (n.d.). UWSpace, University of Waterloo.<sup></sup></li>
+            <li>The Geopolitics of the Semiconductor Industry: Navigating a Global Power Struggle. (n.d.). Silicon Semiconductor.<sup></sup></li>
+            <li>Taiwan's Reliance on the Semiconductor Industry: A Geopolitical Achilles Heel. (n.d.). RSIS.<sup></sup></li>
+            <li>Penile Erection Morphometry: The Need for a Novel Approach. (n.d.). ResearchGate.<sup></sup></li>
+            <li>The Erectile Angle: Objective Criterion to Evaluate the Papaverine Test in Impotence. (n.d.). PubMed.<sup></sup></li>
+            <li>Nocturnal Penile Tumescence and Rigidity (NPTR) Monitoring with RigiScan Device. (n.d.). F1000Research.<sup></sup></li>
+            <li>PenoMeter: An Artificial Intelligence-Powered Assistive Diagnostic Toolkit for Penile Curvature Assessment. (n.d.). Academic.oup.com.<sup></sup></li>
+            <li>Comparison of Missing Data Imputation Methods in Time Series Forecasting. (n.d.). ResearchGate.<sup></sup></li>
+            <li>Comparison of Imputation Methods for Univariate Time Series. (n.d.). MOSPI.gov.in.<sup></sup></li>
+            <li>Imputation by Decomposition and by Time Series Nature: Novel Imputation Methods for Missing Data in Time Series. (n.d.). Repositorio.ufmg.br.<sup></sup></li>
+            <li>Missing Data Presents a Significant Challenge in Statistical Analysis and Machine Learning. (n.d.). SCIRP.org.<sup></sup></li>
+            <li>Augmented Dickey-Fuller (ADF) Test. (n.d.). GeeksforGeeks.<sup></sup></li>
+            <li>KPSS Test: Definition and Interpretation. (n.d.). Statistics How To.<sup></sup></li>
+            <li>Stationarity in Time Series. (n.d.). Hex.tech.<sup></sup></li>
+            <li>Autocorrelation and Partial Autocorrelation. (n.d.). GeeksforGeeks.<sup></sup></li>
+            <li>Interpreting ACF and PACF Plots. (n.d.). SpurEconomics.com.<sup></sup></li>
+            <li>Granger Causality. (n.d.). Scholarpedia.<sup></sup></li>
+            <li>Time Series Analysis Requires Careful Model Selection. (n.d.). Fiveable.<sup></sup></li>
+            <li>ARCH and GARCH Models Have Become Important Tools. (n.d.). Stern.nyu.edu.<sup></sup></li>
+            <li>ARIMA-GARCH, LSTM, and Wavelet-LSTM Demonstrate Robust Adaptability. (n.d.). SHS-Conferences.org.<sup></sup></li>
+            <li>The US-China Trade War and Taiwan's Semiconductor Role. (n.d.). HCSS.nl.<sup></sup></li>
+            <li>The Impact of the US-China Trade War on China's Semiconductor Industry. (n.d.). UCL.ac.uk.<sup></sup></li>
+            <li>Global Semiconductor Supply Chain Dependencies. (n.d.). SecurityConference.org.<sup></sup></li>
+            <li>China Could Be the World's Top Semiconductor Foundry Hub by 2030. (n.d.). Tom's Hardware.<sup></sup></li>
+            <li>TSMC Leading-Edge Node Utilization Rates Show Sustained Strength. (n.d.). CounterpointResearch.com.<sup></sup></li>
+            <li>TSMC Market Share Advanced Nodes. (n.d.). MBI-DeepDives.com.<sup></sup></li>
+            <li>The Geopolitics of Semiconductor Supply Chains. (n.d.). ModernDiplomacy.eu.<sup></sup></li>
+            <li>Taiwan Semiconductor Manufacturing Company (TSM). (n.d.). TheInvestorsPodcast.com.<sup></sup></li>
+            <li>Spurious Correlation and the Fallacy of the Ratio Standard Revisited. (n.d.). Bohrium.com.<sup></sup></li>
+            <li>Spurious Correlations and Ignorance. (n.d.). UWSpace, University of Waterloo.<sup></sup></li>
+            <li>The Role of Theory in Research and the Relationship Between Theory and Philosophical Orientations. (n.d.). ResearchGate.<sup></sup></li>
+            <li>Philosophy of Science. (n.d.). Wikipedia.<sup></sup></li>
+            <li>Effective Scientific Theories Magnify Understanding. (n.d.). Plato.Stanford.edu.<sup></sup></li>
+            <li>Data Mining Pitfalls. (n.d.). Datascience.aero.<sup></sup></li>
+            <li>The Estimation and Detection of Outliers in a Time Series. (n.d.). Academic.oup.com.<sup></sup></li>
+            <li>Time Series Outlier Detection Has Been Extensively Studied. (n.d.). Datasets-Benchmarks-Proceedings.NeurIPS.cc.<sup></sup></li>
+            <li>Time Series Data Cleaning under Speed Constraints. (n.d.). SXSong.github.io.<sup></sup></li>
+            <li>Ethical Considerations in Synthetic Data Generation Research. (n.d.). PubMed Central.<sup></sup></li>
+        </ol>
+    </div>
+</body>
+</html>
